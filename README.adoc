@@ -1,0 +1,15 @@
+== Flyway Demo
+
+* Create MySQL database 'flyway-demo'
+
+[source, bash]
+----
+docker run --name flyway-demo -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=flyway_demo -p 3306:3306 mysql:5.6
+----
+
+* Perform script execution
+
+[source, bash]
+----
+./mvnw flyway:migrate
+----
